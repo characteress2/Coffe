@@ -467,9 +467,9 @@ module_param_named(
 );
 
 #ifdef CONFIG_FORCE_FAST_CHARGE
-static int smbchg_default_hvdcp_icl_ma = 2400;
+static int smbchg_default_hvdcp_icl_ma = 2478;
 #else
-static int smbchg_default_hvdcp_icl_ma = 1800;
+static int smbchg_default_hvdcp_icl_ma = 2400;
 #endif
 module_param_named(
 	default_hvdcp_icl_ma, smbchg_default_hvdcp_icl_ma,
@@ -483,9 +483,9 @@ module_param_named(
 );
 
 #ifdef CONFIG_FORCE_FAST_CHARGE
-static int smbchg_default_dcp_icl_ma = 2400;
+static int smbchg_default_dcp_icl_ma = 2478;
 #else
-static int smbchg_default_dcp_icl_ma = 1800;
+static int smbchg_default_dcp_icl_ma = 2400;
 #endif
 module_param_named(
 	default_dcp_icl_ma, smbchg_default_dcp_icl_ma,
@@ -1425,6 +1425,7 @@ static int dc_ilim_ma_table_8996[] = {
 	2200,
 	2300,
 	2400,
+	2478,
 	2500,
 	
 };
@@ -1446,6 +1447,7 @@ static const int fcc_comp_table_8996[] = {
 	2000,
 	2200,
 	2400,
+	2478,
 };
 
 static const int aicl_rerun_period[] = {
